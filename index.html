@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>वायु प्रदूषण - एक गंभीर संकट</title>
+    <style>
+        :root {
+            --primary-dark: #1e272e;
+            --danger-red: #ff4757;
+            --success-green: #2ed573;
+            --info-blue: #1e90ff;
+            --text-main: #2f3542;
+            --bg-light: #f1f2f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 39, 46, 0.85), rgba(30, 39, 46, 0.95)), 
+                        url('https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 4px 6px rgba(0,0,0,0.5);
+            animation: dropDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            color: #ced6e0;
+            margin-top: 15px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Introduction & AQI Box */
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .info-box h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-top: 0;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .intro-title { border-bottom: 3px solid var(--danger-red); }
+        .aqi-title { border-bottom: 3px solid var(--info-blue); }
+
+        .info-box p {
+            font-size: 1.25rem;
+            max-width: 950px;
+            margin: 20px auto 0;
+            color: #57606f;
+            text-align: left;
+        }
+
+        /* Grid Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 6px solid #ccc;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card.causes { border-color: #ffa502; }
+        .card.effects { border-color: var(--danger-red); }
+        .card.solutions { border-color: var(--success-green); }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "👉";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer h2 {
+            margin: 0 0 10px 0;
+            color: var(--success-green);
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            color: #a4b0be;
+        }
+
+        /* Animations */
+        @keyframes dropDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>वायु प्रदूषण</h1>
+        <p>कारण, प्रभाव और हमारा दायित्व</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="info-box">
+            <h2 class="intro-title">वायु प्रदूषण क्या है?</h2>
+            <p>जब हमारी हवा में हानिकारक गैसें, धुआं, धूल (PM 2.5 और PM 10) और रसायनिक तत्व मिल जाते हैं, जिससे हवा जहरीली हो जाती है और इंसानों, जानवरों तथा प्रकृति के लिए खतरनाक बन जाती है, तो उसे वायु प्रदूषण (Air Pollution) कहा जाता है। यह सिर्फ घर के बाहर ही नहीं, बल्कि बंद कमरों (Indoor Pollution) में भी हो सकता है।</p>
+        </div>
+
+        <div class="info-box">
+            <h2 class="aqi-title">AQI (Air Quality Index) क्या होता है?</h2>
+            <p>AQI हवा की गुणवत्ता मापने का एक पैमाना है। यह हमें बताता है कि हवा सांस लेने के लिए कितनी सुरक्षित या खतरनाक है।<br><br>
+            🟢 <strong>0-50:</strong> अच्छी हवा (Good)<br>
+            🟡 <strong>51-100:</strong> संतोषजनक (Satisfactory)<br>
+            🟠 <strong>101-200:</strong> मध्यम (Moderate)<br>
+            🔴 <strong>201-300:</strong> खराब (Poor)<br>
+            🟣 <strong>301-400:</strong> बहुत खराब (Very Poor)<br>
+            🟤 <strong>401-500+:</strong> गंभीर और खतरनाक (Severe) - जो कि आज के समय में कई बड़े शहरों की सच्चाई बन चुका है।</p>
+        </div>
+
+        <div class="grid">
+            <!-- Causes Card -->
+            <div class="card causes">
+                <h3>🏭 मुख्य कारण</h3>
+                <ul>
+                    <li><strong>वाहनों का धुआं:</strong> सड़कों पर दौड़ती गाड़ियों से निकलने वाली कार्बन मोनोऑक्साइड और नाइट्रोजन ऑक्साइड गैसें।</li>
+                    <li><strong>कारखाने और उद्योग:</strong> पावर प्लांट और फैक्ट्रियों से बिना फिल्टर किए निकलने वाला जहरीला केमिकल।</li>
+                    <li><strong>निर्माण और धूल (Construction):</strong> इमारतें और सड़कें बनते समय उड़ने वाली धूल और सीमेंट के बारीक कण।</li>
+                    <li><strong>पराली और कचरा जलाना:</strong> खेतों में फसल अवशेष और शहरों में खुले में प्लास्टिक/कूड़ा जलाना।</li>
+                    <li><strong>घर के अंदर का प्रदूषण:</strong> खाना पकाने के लिए लकड़ी, कोयले या उपलों का इस्तेमाल और केमिकल वाले स्प्रे।</li>
+                </ul>
+            </div>
+
+            <!-- Effects Card -->
+            <div class="card effects">
+                <h3>⚠️ भयंकर प्रभाव</h3>
+                <ul>
+                    <li><strong>गंभीर बीमारियां:</strong> अस्थमा, सांस फूलना, और फेफड़ों का कैंसर। प्रदूषित हवा से हार्ट अटैक और स्ट्रोक का खतरा भी बढ़ता है।</li>
+                    <li><strong>बच्चों पर असर:</strong> जहरीली हवा बच्चों के फेफड़ों और उनके दिमागी विकास को भारी नुकसान पहुंचाती है।</li>
+                    <li><strong>स्मॉग (Smog):</strong> सर्दियों में धुएं और कोहरे के मिलने से बनने वाला जहरीला स्मॉग, जिससे आँखों में जलन होती है।</li>
+                    <li><strong>ग्लोबल वार्मिंग:</strong> ओजोन परत को नुकसान पहुंच रहा है, धरती का तापमान बढ़ रहा है और ग्लेशियर पिघल रहे हैं।</li>
+                    <li><strong>जीव-जंतुओं पर संकट:</strong> एसिड रेन (अम्लीय वर्षा) के कारण पानी जहरीला हो रहा है, जिससे मछलियां और पक्षी मर रहे हैं।</li>
+                </ul>
+            </div>
+
+            <!-- Solutions Card -->
+            <div class="card solutions">
+                <h3>🌱 हमारा समाधान</h3>
+                <ul>
+                    <li><strong>वृक्षारोपण करें:</strong> हवा को साफ करने के लिए ज्यादा से ज्यादा पौधे (जैसे नीम, पीपल, एलोवेरा) लगाएं।</li>
+                    <li><strong>सार्वजनिक परिवहन:</strong> बस, ट्रेन या कार-पूलिंग का इस्तेमाल करें। हो सके तो इलेक्ट्रिक वाहनों (EV) को अपनाएं।</li>
+                    <li><strong>नियमों का पालन:</strong> अपनी गाड़ियों का समय-समय पर PUC (Pollution Under Control) चेक कराएं।</li>
+                    <li><strong>कचरा न जलाएं:</strong> कूड़े को जलाने के बजाय नगर निगम की गाड़ियों में डालें और रीसायकल (Recycle) करें।</li>
+                    <li><strong>जागरूकता फैलाएं:</strong> अपने परिवार और दोस्तों को प्रदूषण के खतरों के बारे में बताएं और उन्हें जागरूक करें।</li>
+                </ul>
+                <img src="https://media.istockphoto.com/id/490438224/photo/portrait-of-little-boy-wearing-pollution-mask.jpg?s=612x612&w=0&k=20&c=I0HNmv47-ESBKhzbbGOeX8Gt1feKJ8HRvWOibtWHZnU=">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h2>सांसें हो रही हैं कम, आओ पेड़ लगाएं हम!</h2>
+        <p>स्वच्छ हवा हम सबका अधिकार है, इसे बचाना हम सबकी सामूहिक जिम्मेदारी है।<br>आज उठाया गया एक छोटा कदम, कल का भविष्य तय करेगा।</p>
+    </footer>
+
+</body>
+</html>
